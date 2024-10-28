@@ -3,13 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="style.css"> <!-- Asegúrate de tener un archivo CSS -->
+    <title>Sugar Rush</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <div class="titlee">
+        <p>SugarRush</p>
+    </div>
+    <style>
+        body {
+        
+            background-color: #ffe4fe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu-button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+        <!-- Contenedor para los íconos de navegación -->
+        <div class="nav-buttons">
+            <button class="nav-button back">
+                <img src="ruta_a_icono_flecha" alt="Back">
+            </button>
+            <button class="nav-button close">
+                <img src="{{ url_for('static', filename='static/boton_X.png') }}"  alt="Close">
+            </button>
+        </div>
 </head>
 <body>
-    <div class="main-container">
-        <h1>Bienvenido a Sugar Rush</h1>
-        <button onclick="location.href='menu.html'">Ingresar</button>
-    </div>
+    <button class="menu-button" onclick="location.href='menu.html'">Ingresar</button>
 </body>
 </html>
